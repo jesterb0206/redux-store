@@ -1,23 +1,21 @@
-import React, { createContext, useContext } from "react";
-import { useProductReducer } from './reducers'
+import {configureStore} from '@reduxjs/toolkit';
 
-const StoreContext = createContext();
-const { Provider } = StoreContext;
+// Here we're importing our reducers from the slices folder
 
-const StoreProvider = ({ value = [], ...props }) => {
-  const [state, dispatch] = useProductReducer({
-    products: [],
-    cart: [],
-    cartOpen: false,
-    categories: [],
-    currentCategory: '',
-  });
+import productReducer from '../slices/productSlice';
+import cartReducer from '../slices/cartSlice';
+import cartOpenReducer from '../slices/cartOpenSlice';
+import categoriesReducer from '../slices/categoriesSlice';
+import currentCategoryReducer from '../slices/currentCategorySlice';
 
-  return <Provider value={[state, dispatch]} {...props} />;
-};
+// Here we're configuring the store object and exporting it
 
-const useStoreContext = () => {
-  return useContext(StoreContext);
-};
-
-export { StoreProvider, useStoreContext };
+export default configureStore({
+  reducer: {
+    products: productReducer,
+    cart: cartReducer,
+    cartOpen: cartOpenReducer,
+    categories: categoriesReducer,
+    currentCategory: currentCategoryReducer,
+  },
+});
