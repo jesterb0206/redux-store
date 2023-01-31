@@ -1,9 +1,10 @@
 import React from 'react';
+import {useDispatch} from 'react-redux';
+
 // Here we're importing our reducers from the cart slice
 
 import {removeFromCart, updateCartQuantity} from '../../slices/cartSlice';
 import {idbPromise} from '../../utils/helpers';
-import {useDispatch} from 'react-redux';
 
 const CartItem = ({item}) => {
   // Here we're using react-redux's dispatch method to access the reducer from the store object

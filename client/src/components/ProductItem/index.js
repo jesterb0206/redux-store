@@ -1,13 +1,13 @@
 import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {pluralize} from '../../utils/helpers';
-import {idbPromise} from '../../utils/helpers';
-import {useSelector, useDispatch} from 'react-redux';
 import {
   addToCart,
   updateCartQuantity,
   selectCart,
 } from '../../slices/cartSlice';
+import {idbPromise} from '../../utils/helpers';
 
 function ProductItem(item) {
   const cart = useSelector(selectCart);

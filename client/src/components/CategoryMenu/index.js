@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {useQuery} from '@apollo/client';
 import {updateCategories, selectCategories} from '../../slices/categoriesSlice';
+import {updateCurrentCategory} from '../../slices/currentCategorySlice';
 import {QUERY_CATEGORIES} from '../../utils/queries';
 import {idbPromise} from '../../utils/helpers';
-import {updateCurrentCategory} from '../../slices/currentCategorySlice';
-import {useSelector, useDispatch} from 'react-redux';
 
 function CategoryMenu() {
   // Here we're retrieving the categories state and dispatch function

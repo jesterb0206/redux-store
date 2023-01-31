@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import ProductItem from '../ProductItem';
+import {updateProducts, selectProducts} from '../../slices/productSlice';
+import {selectCurrentCategory} from '../../slices/currentCategorySlice';
 import {useQuery} from '@apollo/client';
 import {QUERY_PRODUCTS} from '../../utils/queries';
 import {idbPromise} from '../../utils/helpers';
 import spinner from '../../assets/spinner.gif';
-import {useSelector, useDispatch} from 'react-redux';
-import {updateProducts, selectProducts} from '../../slices/productSlice';
-import {selectCurrentCategory} from '../../slices/currentCategorySlice';
 
 function ProductList() {
   // Get both the CurrentCategory and Products state

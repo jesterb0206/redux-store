@@ -1,18 +1,17 @@
 import React, {useEffect} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {loadStripe} from '@stripe/stripe-js';
 import {useLazyQuery} from '@apollo/client';
+// Here we're importing our reducers from both cart and cartOpen slice
+import {addMultipleToCart, selectCart} from '../../slices/cartSlice';
+import {toggleCart, selectCartOpen} from '../../slices/cartOpenSlice';
 import {QUERY_CHECKOUT} from '../../utils/queries';
 import {idbPromise} from '../../utils/helpers';
 import CartItem from '../CartItem';
 import Auth from '../../utils/auth';
 import './style.css';
-import {useSelector, useDispatch} from 'react-redux';
-// Here we're importing our reducers from both cart and cartOpen slice
-import {addMultipleToCart, selectCart} from '../../slices/cartSlice';
-import {toggleCart, selectCartOpen} from '../../slices/cartOpenSlice';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
-
 const Cart = () => {
   // Here we're getting the current state from both cart and CartOpen
 
