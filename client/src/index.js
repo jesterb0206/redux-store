@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import {Provider} from 'react-redux';
+
+import App from './App';
 import store from './utils/GlobalState';
 
-ReactDOM.render(
-  // Passes the store object to all of the child components
+import './index.css';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
+ReactDOM.render(
+  // to pass the store object to all child components
   <Provider store={store}>
     <App />
   </Provider>,
@@ -18,4 +19,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.register();
+serviceWorkerRegistration.register();
