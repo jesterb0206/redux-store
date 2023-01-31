@@ -39,7 +39,15 @@
 
 <br>
 
+**To-Do**
+
+<br>
+
 ## Installation
+
+<br>
+
+Clone the repository to your local machine, open your terminal, and navigate to the root folder of the **Redux Store** repository. To install the necessary dependencies, run `npm i` in your command-line terminal. Repeat this process two more times, first navigating to the server folder and second navigating to the client folder (running `npm i` both times).
 
 <br>
 
