@@ -59,7 +59,47 @@ Clone the repository to your local machine, open your terminal, and navigate to 
 
 <br>
 
-**To-Do**
+1. To begin using **Redux Store**, sign up by entering first name, last name, a valid email address and a secure password.
+
+<br>
+
+![Sign Up](assets/images/signup.png)
+
+<br>
+
+2. Once you sign up you'll be taken to the homepage. Here you can view all of the products for sale, products by category, add an item (or items) to your cart, delete an item (or items) from your cart, and increase or decrease the quantity of an item in your cart.
+
+<br>
+
+![All Products](assets/images/all-products.png)
+
+<br>
+
+![Shopping](assets/images/shopping.png)
+
+<br>
+
+3. Once you're finished shopping you're ready to proceed to checkout! Please enter a valid email address, `4242 4242 4242 4242` for the card number, any future date for the expiration date, any 3 digit number for the CVC, your full name, any valid United States zip code and then press the `pay` button. When your payment has successfully processed you'll receive a success message. Simply click on `Order History` in the navigation menu to view your completed transactions.
+
+<br>
+
+![Checkout](assets/images/checkout.png)
+
+<br>
+
+![Success](assets/images/sucess.png)
+
+<br>
+
+![Order History](assets/images/order-history.png)
+
+<br>
+
+4. **Redux Store** can even be installed for offline functionality as seen here!
+
+<br>
+
+![Installation](assets/images/installation.png)
 
 <br>
 
