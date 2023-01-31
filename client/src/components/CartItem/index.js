@@ -1,7 +1,7 @@
 import React from 'react';
 // Here we're importing our reducers from the cart slice
 
-import {removeFromCart, updateCartQuantity} from '../../features/cartSlice';
+import {removeFromCart, updateCartQuantity} from '../../slices/cartSlice';
 import {idbPromise} from '../../utils/helpers';
 import {useDispatch} from 'react-redux';
 

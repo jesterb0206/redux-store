@@ -8,8 +8,8 @@ import Auth from '../../utils/auth';
 import './style.css';
 import {useSelector, useDispatch} from 'react-redux';
 // Here we're importing our reducers from both cart and cartOpen slice
-import {addMultipleToCart, selectCart} from '../../features/cartSlice';
-import {toggleCart, selectCartOpen} from '../../features/cartOpenSlice';
+import {addMultipleToCart, selectCart} from '../../slices/cartSlice';
+import {toggleCart, selectCartOpen} from '../../slices/cartOpenSlice';
 
 const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
