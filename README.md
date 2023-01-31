@@ -15,7 +15,11 @@
 
 <br>
 
-**To-Do**
+[Deployment](https://redux-store-0206.herokuapp.com)
+
+<br>
+
+☝🏻 Click there!
 
 <br>
 
@@ -29,6 +33,9 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Badges](#badges)
+  - [Questions](#questions)
+    - [GitHub](#github)
+    - [Email](#email)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
