@@ -29,9 +29,6 @@
   - [Installation](#installation)
   - [Usage](#usage)
   - [Badges](#badges)
-  - [Questions](#questions)
-    - [GitHub](#github)
-    - [Email](#email)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -55,7 +52,15 @@ Clone the repository to your local machine, open your terminal, and navigate to 
 
 <br>
 
+**To-Do**
+
+<br>
+
 ## Badges
+
+<br>
+
+**To-Do**
 
 <br>
 
@@ -63,10 +68,30 @@ Clone the repository to your local machine, open your terminal, and navigate to 
 
 <br>
 
+If you have any additional questions, you can reach me at:
+
+<br>
+
 ### GitHub
 
 <br>
 
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+<br>
+
+[jesterb0206](https://www.github.com/jesterb0206)
+
+<br>
+
 ### Email
+
+<br>
+
+![Microsoft Outlook](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)
+
+<br>
+
+jesterb@seattleu.edu
 
 <br>
