@@ -43,7 +43,7 @@
 
 <br>
 
-**To-Do**
+**Redux Store** is an e-commerce platform that is a single-page-application, a progressive-web-application and a MERN Stack application. The front end was built using React and Redux to handle global state. The back end was built using Apollo Server, GraphQL to handle mutations and queries, Express.js, mongoDB, the Mongoose ODM, and Node.js. IndexedDB is used for offline functionality and Stripe checkout is used for "payment" (test mode) functionality as well.
 
 <br>
 
