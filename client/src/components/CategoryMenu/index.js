@@ -1,44 +1,43 @@
-import React, { useEffect } from 'react';
-import { useQuery } from '@apollo/client';
-import { useStoreContext } from '../../utils/GlobalState';
-import {
-  UPDATE_CATEGORIES,
-  UPDATE_CURRENT_CATEGORY,
-} from '../../utils/actions';
-import { QUERY_CATEGORIES } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
+import React, {useEffect} from 'react';
+import {useQuery} from '@apollo/client';
+import {updateCategories, selectCategories} from '../../slices/categoriesSlice';
+import {QUERY_CATEGORIES} from '../../utils/queries';
+import {idbPromise} from '../../utils/helpers';
+import {updateCurrentCategory} from '../../slices/currentCategorySlice';
+import {useSelector, useDispatch} from 'react-redux';
 
 function CategoryMenu() {
-  const [state, dispatch] = useStoreContext();
+  // Here we're retrieving the categories state and dispatch function
 
-  const { categories } = state;
+  const categories = useSelector(selectCategories);
+  const dispatch = useDispatch();
 
-  const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const {loading, data: categoryData} = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
     if (categoryData) {
-      dispatch({
-        type: UPDATE_CATEGORIES,
-        categories: categoryData.categories,
-      });
+      // Update the categories state with the new category data
+
+      dispatch(updateCategories(categoryData.categories));
+
+      // Save the data to IndexedDB
+
       categoryData.categories.forEach((category) => {
         idbPromise('categories', 'put', category);
       });
     } else if (!loading) {
+      // Retrieve the data from IndexedDB
+
       idbPromise('categories', 'get').then((categories) => {
-        dispatch({
-          type: UPDATE_CATEGORIES,
-          categories: categories,
-        });
+        dispatch(updateCategories(categories));
       });
     }
   }, [categoryData, loading, dispatch]);
 
   const handleClick = (id) => {
-    dispatch({
-      type: UPDATE_CURRENT_CATEGORY,
-      currentCategory: id,
-    });
+    // Upon clicking on a category the product's current category will be updated
+
+    dispatch(updateCurrentCategory(id));
   };
 
   return (
